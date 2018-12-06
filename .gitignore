@@ -59,3 +59,7 @@ typings/
 
 # next.js build output
 .next
+
+# build and destination source code folder na ja
+dist
+build

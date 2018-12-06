@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./vendors/moment.js"></script>
+    <script src="./vendors/moment-timezone-with-data-2012-2022.js"></script>
+    <title>Moment import test</title>
+</head>
+
+<body>
+    <pre id="times">
+        Loading...
+    </pre>
+</body>
+<script>
+    var dataField = document.querySelector('#times');
+
+    setInterval(function () {
+        var losAngelsDate = moment().tz("America/Los_Angeles").format('LL');
+        var bangkokDate = moment().tz("Asia/Bangkok").format('LL');
+        var tokyoDate = moment().tz("Asia/Tokyo").format('LL');
+
+        var losAngelsTime = moment().tz("America/Los_Angeles").format('LTS');
+        var bangkokTime = moment().tz("Asia/Bangkok").format('LTS');
+        var tokyoTime = moment().tz("Asia/Tokyo").format('LTS');
+
+        var displayTimeData = [
+            {
+                timeZone: 'America/Los_Angeles',
+                date: losAngelsDate,
+                time: losAngelsTime
+            },
+            {
+                timeZone: 'America/Bangkok',
+                date: bangkokDate,
+                time: bangkokTime
+            },
+            {
+                timeZone: 'Asia/Tokyo',
+                date: tokyoDate,
+                time: tokyoTime
+            }
+        ];
+
+        dataField.innerHTML = JSON.stringify(displayTimeData, null, 4);
+    }, 1000); // fire above code every second
+</script>
+
+</html>

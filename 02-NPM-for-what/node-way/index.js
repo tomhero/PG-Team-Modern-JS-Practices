@@ -42,3 +42,5 @@ function getTimes() {
     ];
     return displayTimeData;
 }
+
+// https://www.sitepoint.com/beginners-guide-node-package-manager/

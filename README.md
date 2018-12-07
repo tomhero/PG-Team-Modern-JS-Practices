@@ -1,5 +1,5 @@
 # PG-Team-Modern-JS-Practices
-Node JS From scratch - JS Mastery (May be)✨
+Node JS From scratch - JS Mastery (May be) ✨
 
 ## ❗ NPM Behind A Proxy Server ❗
 Using Proxy with NPM

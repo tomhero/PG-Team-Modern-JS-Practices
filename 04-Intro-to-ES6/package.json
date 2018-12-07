@@ -1,0 +1,15 @@
+{
+  "name": "intro-to-es6",
+  "version": "1.0.0",
+  "description": "basic of es2015+",
+  "scripts": {
+    "start": "nodemon ./src/es6.js",
+    "es5": "node ./src/es5.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chayut Ruksomya",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}

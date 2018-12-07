@@ -43,7 +43,7 @@ function sendResponse (requestUrl, response, content) {
             break;
         default:
             response.statusCode = 404;
-            response.end('404 not fount page');
+            response.end('404 not found page');
     }
 }
 

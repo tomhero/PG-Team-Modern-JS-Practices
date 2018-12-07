@@ -1,6 +1,6 @@
 // Problems that We used to encounter
 
-// 1. Closure
+// 1. Closure and non-blocking code
 for (var i = 0; i < 3; i++) {
     setTimeout(
         // callback function ที่จะเรียกทำงานหลังผ่านไป 1 วินาที
@@ -105,3 +105,5 @@ console.log(myArray.sort());/*
 // The default sort order is built upon converting 
 // the elements into strings, then comparing their sequences of UTF-16 code units values.
 */
+
+// read more -> https://github.com/denysdovhan/wtfjs

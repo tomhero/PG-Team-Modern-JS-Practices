@@ -1,5 +1,5 @@
 console.log(`Start ES6+ : ${Date()}, unix timestamp = ${Date.now()}`)
-// 0. no more semicolon need
+// 0. no more semicolon needs
 
 // 1. const let (block-scoped) var (fucntion-scoped)
 const a = 10

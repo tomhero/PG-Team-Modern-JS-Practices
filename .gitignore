@@ -63,3 +63,6 @@ typings/
 # build and destination source code folder na ja
 dist
 build
+
+# vs code setting folder
+.vscode

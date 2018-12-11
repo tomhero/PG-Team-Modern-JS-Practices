@@ -38,9 +38,9 @@ const props = {
 
 /////////////// Array Destructuring ///////////////
 // basic basic
-const rgb = [255, 123, 0];
-const [red, green, blue] = rgb;
-// console.log(`R: ${red}, G: ${green}, B: ${blue}`); // R: 255, G: 200, B: 0
+const rgb = [255, 123, 0]
+const [red, green, blue] = rgb
+// console.log(`R: ${red}, G: ${green}, B: ${blue}`) // R: 255, G: 200, B: 0
 
 function getDualChanel() {
     return ['3HD', 'MCOT']

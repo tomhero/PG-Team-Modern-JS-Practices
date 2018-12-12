@@ -1,29 +1,35 @@
+////////////////////// Callback //////////////////////
 function isUserTooYoung(id, callback) {
-    openDatabase(function (db) {
-        getCollection(db, 'users', function (col) {
+    openDatabase((db) => {
+        getCollection(db, 'users', (col) => {
             find(col, {
                 'id': id
-            }, function (result) {
+            }, (result) => {
                 result.filter(function (user) {
-                    callback(user.age < cutoffAge);
-                });
-            });
-        });
-    });
+                    callback(user.age < cutoffAge)
+                })
+            })
+        })
+    })
 }
 
+isUserTooYoung(2, result => {
+    console.log(result)
+})
+
+////////////////////// Promise //////////////////////
 function isUserTooYoung(id) {
     return openDatabase() // returns a promise
-        .then(function (db) {
-            return getCollection(db, 'users');
+        .then(db => {
+            return getCollection(db, 'users')
         })
-        .then(function (col) {
+        .then(col => {
             return find(col, {
                 'id': id
-            });
+            })
         })
-        .then(function (user) {
-            return user.age < cutoffAge;
+        .then(user => {
+            return user.age < cutoffAge
         })
 }
 
@@ -31,5 +37,3 @@ isUserTooYoung(2)
     .then(data => console.log(data))
     .catch(err => console.error(err))
     .finally(() => cleanSomething())
-
-// TODO: change to ES6 syntax

@@ -39,15 +39,15 @@ let myAdvanceWords = [
 //     return cleanedWord
 // }) // ok readable
 
-// myWords = myWords.map(word => word.toUpperCase().trim()) // very handy!! and readable!!
-
-console.log(myWords)
+myWords = myWords.map(word => word.toUpperCase().trim()) // very handy!! and readable!!
+// console.log('Mapped:', myWords)
 
 /////////////////////// Filter /////////////////////// 
 
 // get only >= 3 length and have no '.' in word
 myWords = myWords.filter(word => word.length >= 3 && !word.includes('.'))
 
+// console.log('Filterd:', myWords)
 
 /////////////////////// Reduce /////////////////////// 
 const numbers = [1, 3, 4, 6, 7, 8, 10] // easy way to sum number values from array

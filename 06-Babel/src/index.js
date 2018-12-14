@@ -4,9 +4,9 @@ const elTitle = document.querySelector('#title')
 
 // setTimeout(() => callback, timeout);
 
-function mySetTimeout (num) {
-    return new Promise((resolve) => {
-        setTimeout(() => resolve(), num)
+function promisedSetTimeout (num) {
+    return new Promise(resolve => {
+        setTimeout(resolve, num)
     })
 }
 
@@ -16,7 +16,7 @@ function simulateLoadingContent (num = 500) {
             throw new Error('Too low num value')
         }
 
-        return mySetTimeout(num)
+        return promisedSetTimeout(num)
 
         // elTitle.innerHTML = `BABEL async await @ ${num}ms`
         // console.log(`YaH!! wait for ${num} miliseconds`)

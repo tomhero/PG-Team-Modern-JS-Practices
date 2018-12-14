@@ -17,6 +17,8 @@ isUserTooYoung(2, result => {
     console.log(result)
 })
 
+// Why promise ??
+
 ////////////////////// Promise //////////////////////
 function isUserTooYoung(id) {
     return openDatabase() // returns a promise

@@ -16,6 +16,7 @@
     "nodemon": "^1.18.8"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0"
+    "@babel/polyfill": "^7.0.0",
+    "node-fetch": "^2.3.0"
   }
 }

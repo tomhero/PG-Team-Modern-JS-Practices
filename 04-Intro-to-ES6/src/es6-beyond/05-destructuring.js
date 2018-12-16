@@ -12,6 +12,7 @@ const user = {
 const { firstName, email } = user
 // console.log(firstName, email)
 
+// ECMAScript 2018 — Object destructuring via rest
 // magic remove unuse object properties
 const chaosObject = {
     el1: '1',

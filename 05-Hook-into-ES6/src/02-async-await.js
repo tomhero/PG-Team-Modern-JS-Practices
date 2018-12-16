@@ -1,3 +1,5 @@
+// ES2017 feature!!
+
 function promisedSetTimeout(num) {
     return new Promise((resolve, reject) => {
         setTimeout(() => resolve('final value'), num)

@@ -8,7 +8,7 @@ function promisedSetTimeout(num) {
 
 // promise!!
 let timmer
-function opreation() {
+function beginOpreation() {
     let timmer = new Date()
     promisedSetTimeout(500)
         .then(val => console.log(val + ' then -> I'))

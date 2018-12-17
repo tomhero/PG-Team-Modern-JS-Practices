@@ -1,6 +1,7 @@
 // Problems that We used to encounter
 
 // 1. Closure and non-blocking code
+// var i;
 for (var i = 0; i < 3; i++) {
     setTimeout(
         // callback function ที่จะเรียกทำงานหลังผ่านไป 1 วินาที
@@ -22,6 +23,7 @@ var x = 3;
 function print() {
     console.log('print');
 }
+// https://devahoy.com/posts/javascript-variable-hoisting/ // (ภาษาไทย)
 */
 
 // 3. Equality Operators
@@ -41,6 +43,8 @@ console.log(typeof b); // object
 console.log(typeof undefined); // undefined
 console.log(typeof null); // object
 */
+
+// https://dorey.github.io/JavaScript-Equality-Table/
 
 // 5. this? - that?
 /*
@@ -101,9 +105,9 @@ console.log(10000000000000000 + 1.1);
 
 /*
 var myArray = [1, 2, 5, 16, -10, -2 , -9, 0];
-console.log(myArray.sort());/*
+console.log(myArray.sort());
+/*
 // The default sort order is built upon converting 
 // the elements into strings, then comparing their sequences of UTF-16 code units values.
-*/
 
 // read more -> https://github.com/denysdovhan/wtfjs

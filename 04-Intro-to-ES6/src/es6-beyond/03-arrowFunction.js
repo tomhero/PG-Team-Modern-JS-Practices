@@ -10,8 +10,8 @@ const bts = {
     showStatusInOneSecond: function showStatusInOneSecond() {
         const stance = getRandomInt(3)
         console.log('gathering data please wait...')
-        setTimeout(function () {
-           console.log(this.systemStatusList[stance])
+        setTimeout(() => {
+            console.log(this.systemStatusList[stance])
         }, 1000)
     },
     addTrain(amount) { // function as property syntax short hand

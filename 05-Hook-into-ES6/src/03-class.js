@@ -7,6 +7,10 @@ class Person {
 
     static species = 'Homo sapiens sapiens'
 
+    static run() {
+        console.log("I'm running")
+    }
+
     walk() {
         console.log("I'm walking...")
     }
@@ -14,10 +18,6 @@ class Person {
     print() {
         console.log(`My name is ${this.name}`)
         console.log(`I'm ${this.age}'`)
-    }
-
-    static run() {
-        console.log("I'm running")
     }
 }
 
@@ -31,7 +31,7 @@ console.log(Person.species) // Homo sapiens sapiens
 
 // สำหรับการทำ inheritance สามารถใช้คีย์เวิร์ด extends ดังนี้
 class Female extends Person {
-    
+
 }
 
 // credit https://www.babelcoder.com/blog/posts/introduction-to-es2015

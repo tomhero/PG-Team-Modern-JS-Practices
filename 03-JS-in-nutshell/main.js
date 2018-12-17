@@ -106,7 +106,7 @@ console.log(10000000000000000 + 1.1);
 /*
 var myArray = [1, 2, 5, 16, -10, -2 , -9, 0];
 console.log(myArray.sort());
-/*
+*/
 // The default sort order is built upon converting 
 // the elements into strings, then comparing their sequences of UTF-16 code units values.
 

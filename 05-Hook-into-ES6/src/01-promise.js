@@ -42,3 +42,8 @@ this.$http.get(url)
             // error callback
             console.error(response.body)
         })
+
+///////////// Jquery Ajax //////////////
+$.ajax(url)
+    .then(data => console.log(data.value))
+    .catch(err => console.error(err))

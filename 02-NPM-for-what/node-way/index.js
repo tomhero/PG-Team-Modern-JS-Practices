@@ -1,4 +1,4 @@
-var moment = require('moment-timezone');
+var moment = require('moment-timezone')
 var http = require('http');
 
 var hostname = 'localhost';

@@ -7,9 +7,11 @@ setTimeout(function () {
 }, 1000)
 
 // warp it with Promise API
+new Promise(resolve, reject)
+
 function promisedSetTimeout(num) {
     return new Promise((resolve, reject) => {
-        setTimeout(() => resolve('final value'), num)
+        setTimeout(() => resolve('data value'), num)
     })
 }
 

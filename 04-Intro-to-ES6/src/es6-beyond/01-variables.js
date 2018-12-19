@@ -6,11 +6,15 @@ const a = 10
 // a = 11 // error
 
 let b = 'val'
-b = 'new val' // good
+b = 'new val'
+ // good
 
 for (let i = 0; i < 3; i++) {
+    var j = 0
     setTimeout(function () {
-        console.log('i :', i);
+        console.log('j :', j);
+        j++;
     },1000);
-}
-console.log('the end : i = ' + i) // error i is not defined
+} // error i is not defined
+const numbers = [1,2,3,4]
+numbers.push(99)

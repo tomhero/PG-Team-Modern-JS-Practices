@@ -46,12 +46,12 @@ const data2 = [{
 
 const allData = [ ...data2, ...data1, { myItem: 'test' } ] // Array Spread
 // console.log(allData)
-// const randomArray = [1,23,45,6,6,444,0,52,4,2,74,0,1,2]
-// const uniqueArray = [...new Set(randomArray)]
-// console.log(uniqueArray)
+const randomArray = [1,23,[45, 65, [123, 33]],6,6,444,0,52,4,2,74,0,1,2]
+const uniqueArray = [...new Set(randomArray)]
+console.log(uniqueArray)
 
 // Cloning Arrays
-const copyOfAllData = [ ...allData ]
+const copyOfAllData = [ ...randomArray ]
 // console.log('copyOfAllData:', copyOfAllData)
 
 const someData = allData[0]

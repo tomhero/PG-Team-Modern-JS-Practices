@@ -31,3 +31,11 @@ bts.showStatusInOneSecond()
 // bts.removeTrain(50)
 // bts.removeTrain(10)
 // console.log(bts.ownedTrain)
+
+function name(params, params2) {
+    return '123'
+}
+
+const name = (params, param2) =>  { 
+    return '123'
+ }

@@ -64,6 +64,7 @@ async function getResource(url) {
     let response
     try {
         response = await this.$http.get(url) // vue-resource method
+        // response = await Vue.http.get(url) // use this in jsfiddle
     } catch (error) {
         // handle error
         console.error(error)
@@ -74,12 +75,19 @@ async function getResource(url) {
 
 ///////////// With Jquery!! //////////////
 async function getData(url) {
-  timmer = new Date()
-  console.log('loading...')
-  const dataset = await $.ajax(url);
-  document.querySelector('.joke').innerHTML = dataset.value.joke
-  console.log('loading', new Date() - timmer, 'ms')
+    timmer = new Date()
+    console.log('loading...')
+  try {
+    const dataset = await $.ajax(url);
+    document.querySelector('.joke').innerHTML = dataset.value.joke
+  } catch (error) {
+    console.error(error)
+  } finally {
+    console.log('finish', new Date() - timmer, 'ms')
+  }
 }
 
 const jokesUrl = 'https://api.icndb.com/jokes/random'
 getData(jokesUrl)
+
+// Uncaught SyntaxError: await is only valid in async function <- if use await without async

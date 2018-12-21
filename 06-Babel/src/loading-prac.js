@@ -1,8 +1,12 @@
 const hello = "Hello Babel!!"
-const elSpinner = document.querySelector('#loading-icon')
-const elTitle = document.querySelector('#title')
+const elSpinners = document.querySelectorAll('.loading-icon')
+const elTitles = document.querySelectorAll('.title')
 
 // setTimeout(() => callback, timeout);
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max))
+}
 
 function promisedSetTimeout (num) {
     return new Promise(resolve => {
@@ -30,8 +34,17 @@ function simulateLoadingContent (num = 500) {
 simulateLoadingContent(2500)
     .then(() => console.log('success ja'))
 
-// elSpinner.style.display = 'block'
-// elTitle.innerHTML = `BABEL async await @ ${num}ms`
-// elTitle.classList.remove('fade-in')
-// elTitle.classList.add('scale-up-center')
-// elSpinner.style.display = 'none'
+// elSpinners[0].style.display = 'block'
+// elTitles[0].innerHTML = `Loading.. @ \${ time } ms`
+// elTitles[0].classList.remove('fade-in')
+// elTitles[0].classList.add('scale-up-center')
+// elSpinners[0].style.display = 'none'
+
+// fetch(`https://jsonplaceholder.typicode.com/todos/${getRandomInt(99)}`)
+//     .then(response => response.json())
+//     .then(data => elTitles[0].innerHTML = data.title)
+//     .then(() => {
+//         elTitles[0].classList.remove('fade-in')
+//         elTitles[0].classList.add('scale-up-center')
+//         elSpinners[0].style.display = 'none'
+//     })

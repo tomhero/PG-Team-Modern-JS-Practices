@@ -10,7 +10,7 @@ function getRandomInt(max) {
 
 function promisedSetTimeout (num) {
     return new Promise(resolve => {
-        setTimeout(resolve, num)
+        setTimeout(() => resolve(), num)
     })
 }
 
@@ -40,11 +40,13 @@ simulateLoadingContent(2500)
 // elTitles[0].classList.add('scale-up-center')
 // elSpinners[0].style.display = 'none'
 
-// fetch(`https://jsonplaceholder.typicode.com/todos/${getRandomInt(99)}`)
-//     .then(response => response.json())
-//     .then(data => elTitles[0].innerHTML = data.title)
-//     .then(() => {
-//         elTitles[0].classList.remove('fade-in')
-//         elTitles[0].classList.add('scale-up-center')
-//         elSpinners[0].style.display = 'none'
-//     })
+for (let index = 0; index < elTitles.length; index++) {
+    loadData(index)
+}
+
+async function loadData(i) {
+    const res = await axios.get(`https://jsonplaceholder.typicode.com/todos/${getRandomInt(99)}`)
+    elTitles[i].innerHTML = res.data.title
+    elTitles[i].classList.remove('fade-in')
+    elTitles[i].classList.add('scale-up-center')
+ }

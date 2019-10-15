@@ -8,7 +8,7 @@ import('./functions/mather').then((mathModule) => {
 
 // OR |> You can use async / await 
 
-(async () => { // useing Immediately-invoked Function Expressions (IIFE) with `async`
+(async () => { // using Immediately-invoked Function Expressions (IIFE) with `async`
     const Mathmodule = await import('./functions/mather')
     Mathmodule.default(2)
     Mathmodule.add(4)

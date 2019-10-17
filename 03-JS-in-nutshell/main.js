@@ -7,10 +7,18 @@ for (var i = 0; i < 3; i++) {
     setTimeout(
         // callback function ที่จะเรียกทำงานหลังผ่านไป 1 วินาที
         function () {
-            console.log('i :', i);
+            console.log(i);
         },
         1000
     );
+}
+
+// 1.5 Closure and non-blocking code @ 2019
+for (let j = 0; j < 3; j++) {
+  const log = function () {
+    console.log(j);
+  }
+  setTimeout(log, 500);
 }
 
 // 2. Hoisting
@@ -121,5 +129,10 @@ console.log(myArray.sort());
 
 // The default sort order is built upon converting 
 // the elements into strings, then comparing their sequences of UTF-16 code units values.
+
+// Array length can be modified... 💢
+myArray.length = 9
+console.log(myArray.length)
+console.log(myArray)
 
 // read more -> https://github.com/denysdovhan/wtfjs
